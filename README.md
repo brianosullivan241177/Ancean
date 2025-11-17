@@ -1,2 +1,2 @@
 # Ancean
-Website to display apps created by Andean
+Website to display apps created by Ancean
