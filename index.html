@@ -1,152 +1,210 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Ancean — Explore the app</title>
+<html lang="en" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App Showcase</title>
+  <script src="/_sdk/element_sdk.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet">
   <style>
-    /* Apple-like minimal aesthetic */
-    :root{
-      --bg:#f5f7fa;
-      --panel:#ffffff;
-      --muted:#6b7280;
-      --accent:#0070f3;
-      --shadow: 0 20px 60px rgba(15,23,42,0.08);
-      --device-shadow: 0 18px 50px rgba(2,6,23,0.12);
-      --radius:28px;
+    body {
+      box-sizing: border-box;
     }
-    html,body{height:100%;margin:0;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:#0f172a;-webkit-font-smoothing:antialiased}
-    .wrap{max-width:1100px;margin:56px auto;padding:0 20px}
-    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:48px}
-    .brand{display:flex;align-items:center;gap:14px}
-    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,#0ea5e9,#2dd4bf);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;box-shadow:var(--shadow);font-size:18px}
-    .site-title{font-size:14px;margin:0;font-weight:600}
-    .site-sub{color:var(--muted);font-size:13px;margin-top:4px}
-    /* Hero / iPhone-like presentation */
-    .hero{display:flex;flex-direction:column;align-items:center;text-align:center;gap:28px;padding:56px 20px;background:linear-gradient(180deg,rgba(255,255,255,0.8),rgba(255,255,255,0.95));border-radius:20px;box-shadow:var(--shadow);}
-    h1.explore{font-size:42px;line-height:1.02;margin:0;font-weight:700;color:#0b1220}
-    p.lead{margin:0;color:var(--muted);max-width:740px;font-size:16px}
-    .devices{display:flex;gap:40px;align-items:flex-start;justify-content:center;margin-top:8px;flex-wrap:wrap}
-    /* phone mockup */
-    .phone{
-      width:220px;
-      height:460px;
-      border-radius:42px;
-      background:linear-gradient(180deg,#08111a,#0f1b2a);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      color:#fff;
-      position:relative;
-      box-shadow:var(--device-shadow);
+    
+    * {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
     }
-    .phone::before{
-      content:"";
-      position:absolute;
-      top:10px;left:50%;transform:translateX(-50%);
-      width:60px;height:6px;border-radius:4px;background:rgba(255,255,255,0.06);
+    
+    .gradient-bg {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     }
-    .screen{
-      width:88%;
-      height:86%;
-      border-radius:26px;
-      background:linear-gradient(180deg,#0f1724,#07121a);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      box-shadow:inset 0 2px 10px rgba(255,255,255,0.02);
-      font-size:22px;font-weight:700;color:#dbeffd;
-      text-shadow:0 2px 10px rgba(0,0,0,0.5)
+    
+    .image-placeholder {
+      background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+      border: 2px dashed rgba(102, 126, 234, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 280px;
+      border-radius: 16px;
+      transition: all 0.3s ease;
     }
-    .caption{margin-top:14px;font-weight:600;color:#0b1220}
-    .devices .label{margin-top:10px;text-align:center;color:var(--muted);font-size:14px}
-    /* layout */
-    main{margin-top:34px}
-    .section{margin-top:68px;padding:40px;border-radius:16px;background:var(--panel);box-shadow:var(--shadow)}
-    h2.section-title{text-transform:none;margin:0 0 18px 0;font-size:20px;color:#0b1220}
-    p.section-desc{color:var(--muted);margin:0 0 16px 0}
-    /* developer card */
-    .dev-card{display:flex;gap:18px;align-items:center}
-    .avatar{width:84px;height:84px;border-radius:20px;background:linear-gradient(135deg,#0ea5e9,#2dd4bf);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:26px;box-shadow:var(--device-shadow)}
-    .dev-info{line-height:1.3}
-    .dev-name{font-weight:700;margin:0}
-    .dev-bio{color:var(--muted);margin:6px 0 0 0}
-    /* responsive */
-    @media (max-width:820px){
-      .devices{gap:20px}
-      .phone{width:180px;height:380px;border-radius:34px}
-      .screen{font-size:18px}
-      h1.explore{font-size:36px}
+    
+    .image-placeholder:hover {
+      border-color: rgba(102, 126, 234, 0.6);
+      background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%);
     }
-    @media (max-width:520px){
-      .wrap{margin:28px auto;padding:0 16px}
-      .hero{padding:32px}
-      h1.explore{font-size:28px}
-      .phone{width:150px;height:320px}
-      .avatar{width:64px;height:64px;font-size:20px}
-      .devices{gap:18px}
-      .section{padding:24px}
+    
+    .cta-button {
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 14px rgba(102, 126, 234, 0.4);
+    }
+    
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
     }
   </style>
-</head>
-<body>
-  <div class="wrap">
-    <header>
-      <div class="brand">
-        <div class="logo">A</div>
-        <div>
-          <p class="site-title">Ancean</p>
-          <p class="site-sub">Creating apps that I hope you will find useful.</p>
-        </div>
-      </div>
-      <div class="actions">
-        <a href="https://github.com/brianosullivan241177/ancean" style="text-decoration:none;color:var(--accent);font-weight:600">View on GitHub</a>
-      </div>
-    </header>
-
-    <div class="hero" role="region" aria-labelledby="explore-heading">
-      <h1 id="explore-heading" class="explore">Explore the Apps:</h1>
-      <p class="lead">Discover mobile experiences to help you that I created using Xcode. These are my first two apps.</p>
-
-      <div class="devices" role="list" aria-label="App previews">
-        <div role="listitem" style="text-align:center">
-          <div class="phone" aria-hidden="true">
-            <div class="screen" role="img" aria-label="App 1 preview">
-              App 1
-            </div>
-          </div>
-          <div class="devices label">App 1</div>
-        </div>
-
-        <div role="listitem" style="text-align:center">
-          <div class="phone" aria-hidden="true">
-            <div class="screen" role="img" aria-label="App 2 preview">
-              App 2
-            </div>
-          </div>
-          <div class="devices label">App 2</div>
-        </div>
-      </div>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full">
+  <div class="w-full h-full overflow-auto"><!-- Hero Section -->
+   <div class="gradient-bg w-full py-20 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+     <h1 id="app-title" class="text-white mb-4" style="font-size: 3em; font-weight: 700; line-height: 1.2;">Your Amazing App</h1>
+     <p id="app-tagline" class="text-white mb-8" style="font-size: 1.25em; opacity: 0.95;">Transform your workflow with innovative features</p><button id="cta-button" class="cta-button text-white px-8 py-4 rounded-full" style="font-size: 1.1em; font-weight: 600; background-color: #4f46e5;">Get Started</button>
     </div>
-
-    <main>
-      <section class="section" aria-labelledby="dev-heading">
-        <h2 id="dev-heading" class="section-title">getting to know the developer</h2>
-        <p class="section-desc">Short background and goals — learn about the developer, what they're building, and how they approach learning Xcode and AI.</p>
-
-        <div class="dev-card">
-          <div class="avatar" aria-hidden="true">BS</div>
-          <div class="dev-info">
-            <p class="dev-name">Brian O'Sullivan</p>
-            <p class="dev-bio">Passionate about building iOS apps and exploring practical AI integrations.</p>
-          </div>
-        </div>
-      </section>
-    </main>
+   </div><!-- Introduction Section -->
+   <div class="w-full py-16 px-6" style="background-color: #ffffff;">
+    <div class="max-w-4xl mx-auto">
+     <h2 class="text-center mb-4" style="font-size: 2.25em; font-weight: 700; color: #1f2937;">Introducing Our App</h2>
+     <h3 class="text-center mb-8" style="font-size: 1.5em; font-weight: 600; color: #667eea;">FPL Deadline Tracker</h3>
+     <p id="intro-text" class="text-center max-w-3xl mx-auto leading-relaxed" style="font-size: 1.15em; color: #4b5563;">FPL Deadline tracker is an app to help you with the deadlines for Fantasy Premier League. It will show the next two deadline dates and times. There is also an option to add a reminder before the deadline. There is also a link to the fantasy premier league website. This is my first app.</p>
+    </div>
+   </div><!-- App Screenshots Section -->
+   <div class="w-full py-16 px-6" style="background-color: #f9fafb;">
+    <div class="max-w-6xl mx-auto">
+     <h2 class="text-center mb-12" style="font-size: 2.25em; font-weight: 700; color: #1f2937;">See It In Action</h2>
+     <div class="grid grid-cols-1 md:grid-cols-2 gap-8"><!-- Screenshot 1 -->
+      <div class="image-placeholder">
+       <div class="text-center p-6">
+        <svg class="mx-auto mb-4" width="64" height="64" viewbox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="64" height="64" rx="12" fill="#667eea" opacity="0.2" /> <path d="M20 28L32 36L44 28M20 36L32 44L44 36" stroke="#667eea" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /> <rect x="18" y="20" width="28" height="20" rx="2" stroke="#667eea" stroke-width="3" />
+        </svg>
+        <p style="color: #667eea; font-weight: 600; font-size: 1em;">Screenshot 1</p>
+        <p style="color: #6b7280; font-size: 0.875em; margin-top: 0.5em;">Add your app image here</p>
+       </div>
+      </div><!-- Screenshot 2 -->
+      <div class="image-placeholder">
+       <div class="text-center p-6">
+        <svg class="mx-auto mb-4" width="64" height="64" viewbox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="64" height="64" rx="12" fill="#764ba2" opacity="0.2" /> <circle cx="32" cy="24" r="6" stroke="#764ba2" stroke-width="3" /> <path d="M20 44C20 37.3726 25.3726 32 32 32C38.6274 32 44 37.3726 44 44" stroke="#764ba2" stroke-width="3" stroke-linecap="round" />
+        </svg>
+        <p style="color: #764ba2; font-weight: 600; font-size: 1em;">Screenshot 2</p>
+        <p style="color: #6b7280; font-size: 0.875em; margin-top: 0.5em;">Add your app image here</p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div><!-- Footer -->
+   <div class="w-full py-12 px-6" style="background-color: #1f2937;">
+    <div class="max-w-4xl mx-auto text-center">
+     <p style="color: #9ca3af; font-size: 0.95em;">© 2024 Your App Name. All rights reserved.</p>
+    </div>
+   </div>
   </div>
-
   <script>
-    // no JS required for layout; keep simple and accessible
+    const defaultConfig = {
+      app_title: "AnCeAn",
+      app_tagline: "App design by Brian O'Sullivan",
+      intro_text: "FPL Deadline tracker is an app to help you with the deadlines for Fantasy Premier League. It will show the next two deadline dates and times. There is also an option to add a reminder before the deadline. There is also a link to the fantasy premier league website. This is my first app.",
+      cta_button: "Get Started",
+      primary_color: "#667eea",
+      secondary_color: "#764ba2",
+      background_color: "#ffffff",
+      text_color: "#1f2937",
+      button_color: "#4f46e5"
+    };
+
+    async function onConfigChange(config) {
+      const titleEl = document.getElementById('app-title');
+      const taglineEl = document.getElementById('app-tagline');
+      const introEl = document.getElementById('intro-text');
+      const ctaEl = document.getElementById('cta-button');
+      
+      if (titleEl) titleEl.textContent = config.app_title || defaultConfig.app_title;
+      if (taglineEl) taglineEl.textContent = config.app_tagline || defaultConfig.app_tagline;
+      if (introEl) introEl.textContent = config.intro_text || defaultConfig.intro_text;
+      if (ctaEl) ctaEl.textContent = config.cta_button || defaultConfig.cta_button;
+
+      // Apply colors
+      const gradientBgs = document.querySelectorAll('.gradient-bg');
+      gradientBgs.forEach(bg => {
+        bg.style.background = `linear-gradient(135deg, ${config.primary_color || defaultConfig.primary_color} 0%, ${config.secondary_color || defaultConfig.secondary_color} 100%)`;
+      });
+
+      if (ctaEl) {
+        ctaEl.style.backgroundColor = config.button_color || defaultConfig.button_color;
+      }
+
+      const mainSections = document.querySelectorAll('.w-full.py-16');
+      if (mainSections[0]) {
+        mainSections[0].style.backgroundColor = config.background_color || defaultConfig.background_color;
+      }
+
+      const headings = document.querySelectorAll('h2');
+      headings.forEach(h => {
+        h.style.color = config.text_color || defaultConfig.text_color;
+      });
+    }
+
+    function mapToCapabilities(config) {
+      return {
+        recolorables: [
+          {
+            get: () => config.primary_color || defaultConfig.primary_color,
+            set: (value) => {
+              if (window.elementSdk) {
+                window.elementSdk.setConfig({ primary_color: value });
+              }
+            }
+          },
+          {
+            get: () => config.secondary_color || defaultConfig.secondary_color,
+            set: (value) => {
+              if (window.elementSdk) {
+                window.elementSdk.setConfig({ secondary_color: value });
+              }
+            }
+          },
+          {
+            get: () => config.background_color || defaultConfig.background_color,
+            set: (value) => {
+              if (window.elementSdk) {
+                window.elementSdk.setConfig({ background_color: value });
+              }
+            }
+          },
+          {
+            get: () => config.text_color || defaultConfig.text_color,
+            set: (value) => {
+              if (window.elementSdk) {
+                window.elementSdk.setConfig({ text_color: value });
+              }
+            }
+          },
+          {
+            get: () => config.button_color || defaultConfig.button_color,
+            set: (value) => {
+              if (window.elementSdk) {
+                window.elementSdk.setConfig({ button_color: value });
+              }
+            }
+          }
+        ],
+        borderables: [],
+        fontEditable: undefined,
+        fontSizeable: undefined
+      };
+    }
+
+    function mapToEditPanelValues(config) {
+      return new Map([
+        ["app_title", config.app_title || defaultConfig.app_title],
+        ["app_tagline", config.app_tagline || defaultConfig.app_tagline],
+        ["intro_text", config.intro_text || defaultConfig.intro_text],
+        ["cta_button", config.cta_button || defaultConfig.cta_button]
+      ]);
+    }
+
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities,
+        mapToEditPanelValues
+      });
+    }
   </script>
-</body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9b9a725205a4ee96',t:'MTc2NzY5NDQ0Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
