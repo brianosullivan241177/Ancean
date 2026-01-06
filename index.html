@@ -31,185 +31,39 @@
       transition: all 0.3s ease;
     }
     
-    .image-placeholder:hover {
-      border-color: rgba(102, 126, 234, 0.6);
-      background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%);
-    }
-    
-    .cta-button {
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 14px rgba(102, 126, 234, 0.4);
-    }
-    
-    .cta-button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+    .image-placeholder img {
+      width: 100%;
+      border-radius: 16px;
     }
   </style>
-  <style>@view-transition { navigation: auto; }</style>
-  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
  </head>
  <body class="h-full">
-  <div class="w-full h-full overflow-auto"><!-- Hero Section -->
+  <div class="w-full h-full overflow-auto">
+   <!-- Hero Section -->
    <div class="gradient-bg w-full py-20 px-6">
     <div class="max-w-4xl mx-auto text-center">
      <h1 id="app-title" class="text-white mb-4" style="font-size: 3em; font-weight: 700; line-height: 1.2;">AnCeAn</h1>
-     <p id="app-tagline" class="text-white mb-8" style="font-size: 1.25em; opacity: 0.95;">App Design by Brian O'Sullivan</p><button id="cta-button" class="cta-button text-white px-8 py-4 rounded-full" style="font-size: 1.1em; font-weight: 600; background-color: #4f46e5;">Get Started</button>
+     <p id="app-tagline" class="text-white mb-8" style="font-size: 1.25em; opacity: 0.95;">App Design by Brian O'Sullivan</p>
+     <button id="cta-button" class="cta-button text-white px-8 py-4 rounded-full" style="font-size: 1.1em; font-weight: 600; background-color: #4f46e5;">Get Started</button>
     </div>
-   </div><!-- Introduction Section -->
-   <div class="w-full py-16 px-6" style="background-color: #ffffff;">
-    <div class="max-w-4xl mx-auto">
-     <h2 class="text-center mb-4" style="font-size: 2.25em; font-weight: 700; color: #1f2937;">Introducing Our App</h2>
-     <h3 class="text-center mb-8" style="font-size: 1.5em; font-weight: 600; color: #667eea;">FPL Deadline Tracker</h3>
-     <p id="intro-text" class="text-center max-w-3xl mx-auto leading-relaxed" style="font-size: 1.15em; color: #4b5563;">FPL Deadline tracker is an app to help you with the deadlines for Fantasy Premier League. It will show the next two deadline dates and times. There is also an option to add a reminder before the deadline. There is also a link to the fantasy premier league website. This is my first app.</p>
-    </div>
-   </div><!-- App Screenshots Section -->
+   </div>
+
+   <!-- Screenshot Section -->
    <div class="w-full py-16 px-6" style="background-color: #f9fafb;">
     <div class="max-w-6xl mx-auto">
      <h2 class="text-center mb-12" style="font-size: 2.25em; font-weight: 700; color: #1f2937;">See It In Action</h2>
-     <div class="grid grid-cols-1 md:grid-cols-2 gap-8"><!-- Screenshot 1 -->
-      <div class="image-placeholder">
-      <img src="https://github.com/brianosullivan241177/Ancean/blob/main/image0.png" alt="Screenshot 1" style="width:100%; border-radius:16px;">
-       <div class="text-center p-6">
-        <svg class="mx-auto mb-4" width="64" height="64" viewbox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="64" height="64" rx="12" fill="#667eea" opacity="0.2" /> <path d="M20 28L32 36L44 28M20 36L32 44L44 36" stroke="#667eea" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /> <rect x="18" y="20" width="28" height="20" rx="2" stroke="#667eea" stroke-width="3" />
-        </svg>
-        <p style="color: #667eea; font-weight: 600; font-size: 1em;">Screenshot 1</p>
-
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-  <!-- Screenshot 1 -->
-  <div class="image-placeholder">
-    <img src="https://github.com/brianosullivan241177/Ancean/blob/main/image0.png" alt="Screenshot 1" style="width:100%; border-radius:16px;">
-  </div>
-      </div><!-- Screenshot 2 -->
-      <div class="image-placeholder">
-       <div class="text-center p-6">
-        <svg class="mx-auto mb-4" width="64" height="64" viewbox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="64" height="64" rx="12" fill="#764ba2" opacity="0.2" /> <circle cx="32" cy="24" r="6" stroke="#764ba2" stroke-width="3" /> <path d="M20 44C20 37.3726 25.3726 32 32 32C38.6274 32 44 37.3726 44 44" stroke="#764ba2" stroke-width="3" stroke-linecap="round" />
-        </svg>
-        <p style="color: #764ba2; font-weight: 600; font-size: 1em;">Screenshot 2</p>
-        <p style="color: #6b7280; font-size: 0.875em; margin-top: 0.5em;">Add your app image here</p>
-       </div>
-      </div>
+     <div class="image-placeholder">
+       <img src="https://github.com/brianosullivan241177/Ancean/files/image0.png" alt="Screenshot">
      </div>
     </div>
-   </div><!-- Footer -->
+   </div>
+
+   <!-- Footer -->
    <div class="w-full py-12 px-6" style="background-color: #1f2937;">
     <div class="max-w-4xl mx-auto text-center">
      <p style="color: #9ca3af; font-size: 0.95em;">© 2024 Your App Name. All rights reserved.</p>
     </div>
    </div>
   </div>
-  <script>
-    const defaultConfig = {
-      app_title: "AnCeAn",
-      app_tagline: "App design by Brian O'Sullivan",
-      intro_text: "FPL Deadline tracker is an app to help you with the deadlines for Fantasy Premier League. It will show the next two deadline dates and times. There is also an option to add a reminder before the deadline. There is also a link to the fantasy premier league website. This is my first app.",
-      cta_button: "Get Started",
-      primary_color: "#667eea",
-      secondary_color: "#764ba2",
-      background_color: "#ffffff",
-      text_color: "#1f2937",
-      button_color: "#4f46e5"
-    };
-
-    async function onConfigChange(config) {
-      const titleEl = document.getElementById('app-title');
-      const taglineEl = document.getElementById('app-tagline');
-      const introEl = document.getElementById('intro-text');
-      const ctaEl = document.getElementById('cta-button');
-      
-      if (titleEl) titleEl.textContent = config.app_title || defaultConfig.app_title;
-      if (taglineEl) taglineEl.textContent = config.app_tagline || defaultConfig.app_tagline;
-      if (introEl) introEl.textContent = config.intro_text || defaultConfig.intro_text;
-      if (ctaEl) ctaEl.textContent = config.cta_button || defaultConfig.cta_button;
-
-      // Apply colors
-      const gradientBgs = document.querySelectorAll('.gradient-bg');
-      gradientBgs.forEach(bg => {
-        bg.style.background = `linear-gradient(135deg, ${config.primary_color || defaultConfig.primary_color} 0%, ${config.secondary_color || defaultConfig.secondary_color} 100%)`;
-      });
-
-      if (ctaEl) {
-        ctaEl.style.backgroundColor = config.button_color || defaultConfig.button_color;
-      }
-
-      const mainSections = document.querySelectorAll('.w-full.py-16');
-      if (mainSections[0]) {
-        mainSections[0].style.backgroundColor = config.background_color || defaultConfig.background_color;
-      }
-
-      const headings = document.querySelectorAll('h2');
-      headings.forEach(h => {
-        h.style.color = config.text_color || defaultConfig.text_color;
-      });
-    }
-
-    function mapToCapabilities(config) {
-      return {
-        recolorables: [
-          {
-            get: () => config.primary_color || defaultConfig.primary_color,
-            set: (value) => {
-              if (window.elementSdk) {
-                window.elementSdk.setConfig({ primary_color: value });
-              }
-            }
-          },
-          {
-            get: () => config.secondary_color || defaultConfig.secondary_color,
-            set: (value) => {
-              if (window.elementSdk) {
-                window.elementSdk.setConfig({ secondary_color: value });
-              }
-            }
-          },
-          {
-            get: () => config.background_color || defaultConfig.background_color,
-            set: (value) => {
-              if (window.elementSdk) {
-                window.elementSdk.setConfig({ background_color: value });
-              }
-            }
-          },
-          {
-            get: () => config.text_color || defaultConfig.text_color,
-            set: (value) => {
-              if (window.elementSdk) {
-                window.elementSdk.setConfig({ text_color: value });
-              }
-            }
-          },
-          {
-            get: () => config.button_color || defaultConfig.button_color,
-            set: (value) => {
-              if (window.elementSdk) {
-                window.elementSdk.setConfig({ button_color: value });
-              }
-            }
-          }
-        ],
-        borderables: [],
-        fontEditable: undefined,
-        fontSizeable: undefined
-      };
-    }
-
-    function mapToEditPanelValues(config) {
-      return new Map([
-        ["app_title", config.app_title || defaultConfig.app_title],
-        ["app_tagline", config.app_tagline || defaultConfig.app_tagline],
-        ["intro_text", config.intro_text || defaultConfig.intro_text],
-        ["cta_button", config.cta_button || defaultConfig.cta_button]
-      ]);
-    }
-
-    if (window.elementSdk) {
-      window.elementSdk.init({
-        defaultConfig,
-        onConfigChange,
-        mapToCapabilities,
-        mapToEditPanelValues
-      });
-    }
-  </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9b9a725205a4ee96',t:'MTc2NzY5NDQ0Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ </body>
 </html>
