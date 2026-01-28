@@ -1,121 +1,135 @@
 <!doctype html>
 <html lang="en" class="h-full">
- <head>
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>App Showcase - FPL Deadline Tracker</title>
-  <script src="/_sdk/element_sdk.js"></script>
+  <title>AnCeAn | FPL Deadline Tracker</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --apple-gray: #f5f5f7;
+      --apple-blue: #0071e3;
+    }
+    
     body {
-      box-sizing: border-box;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #ffffff;
+      color: #1d1d1f;
+      -webkit-font-smoothing: antialiased;
     }
-    
-    * {
-      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+    .hero-gradient {
+      background: radial-gradient(circle at center, #ffffff 0%, #f5f5f7 100%);
     }
-    
-    .gradient-bg {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+    /* Subtle Glassmorphism for cards */
+    .apple-card {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(20px);
+      border-radius: 24px;
+      transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     }
-    
-    .image-placeholder {
-      background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
-      border: 2px dashed rgba(102, 126, 234, 0.3);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 280px;
-      border-radius: 16px;
-      transition: all 0.3s ease;
+
+    /* Modern device-like shadow */
+    .screenshot-shadow {
+      box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+      border-radius: 40px;
+      border: 8px solid #1d1d1f; /* Frame effect */
     }
-    
-    .image-placeholder img {
-      width: 50%; /* Reduce the screenshot size to 50% of the container */
-      border-radius: 16px;
+
+    .btn-apple {
+      background-color: var(--apple-blue);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 980px;
+      font-weight: 500;
+      transition: all 0.2s ease;
     }
-    
-    .screenshot-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      justify-content: center;
+
+    .btn-apple:hover {
+      background-color: #0077ed;
+      transform: scale(1.02);
     }
-    
-    .screenshot {
-      flex: 1 1 45%; /* Make each screenshot take 45% of the available width */
-      max-width: 400px;
-    }
-    
-    .screenshot img {
-      width: 100%; /* Ensure images span the full width of their container */
-      border-radius: 16px;
+
+    .section-title {
+      letter-spacing: -0.022em;
     }
   </style>
- </head>
- <body class="h-full">
-  <div class="w-full h-full overflow-auto">
-   <!-- Hero Section -->
-   <div class="gradient-bg w-full py-20 px-6">
-    <div class="max-w-4xl mx-auto text-center">
-     <h1 id="app-title" class="text-white mb-4" style="font-size: 3em; font-weight: 700; line-height: 1.2;">AnCeAn</h1>
-     <p id="app-tagline" class="text-white mb-8" style="font-size: 1.25em; opacity: 0.95;">App Design by Brian O'Sullivan</p>
-     </div>
-   </div>
+</head>
+<body class="h-full">
+  <div class="w-full h-full">
+    
+    <section class="hero-gradient pt-24 pb-16 px-6">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-6xl md:text-7xl font-bold section-title mb-4 tracking-tight">AnCeAn</h1>
+        <p class="text-xl md:text-2xl font-medium text-gray-500 mb-10">Designed for the beautiful game.</p>
+        <div class="flex justify-center gap-4">
+           <span class="text-sm font-semibold text-blue-600 bg-blue-50 px-4 py-1 rounded-full">By Brian O'Sullivan</span>
+        </div>
+      </div>
+    </section>
 
-   <!-- FPL Deadline Tracker Section -->
-   <div class="w-full py-16 px-6" style="background-color: #ffffff;">
-    <div class="max-w-6xl mx-auto text-center">
-     <h2 class="mb-6" style="font-size: 2em; font-weight: 700; color: #1f2937;">FPL Deadline Tracker</h2>
-     <p style="font-size: 1.2em; color: #4b5563; line-height: 1.6;">
-       FPL Deadline Tracker is an app to help you with the deadlines for Fantasy Premier League. It will show the next two deadline dates and times, based on GMT. There is also an option to add a timer to the lock screen, this is only available 48 hours before the deadline. There is also a link to the Fantasy Premier League website. This is my first app.
-     </p>
-    </div>
-   </div>
-   
-   </div>   <!-- Screenshot Section -->
-   <div class="w-full py-16 px-6" style="background-color: #f9fafb;">
-    <div class="max-w-6xl mx-auto">
-     <h2 class="text-center mb-12" style="font-size: 2.25em; font-weight: 700; color: #1f2937;">See It In Action</h2>
-     <div class="screenshot-container">
-       <!-- Screenshot 1 -->
-       <div class="screenshot">
-         <img src="https://raw.githubusercontent.com/brianosullivan241177/Ancean/main/image0.png" alt="Screenshot 1">
-       </div>
-       <!-- Screenshot 2 -->
-       <div class="screenshot">
-         <img src="https://raw.githubusercontent.com/brianosullivan241177/Ancean/main/Prince_FPL.png" alt="Screenshot 2">
-       </div>
-     </div>
-    </div>
-   </div>
+    <section class="py-20 px-6 max-w-5xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-4xl font-bold section-title mb-6">FPL Deadline Tracker</h2>
+          <p class="text-lg text-gray-600 leading-relaxed mb-6">
+            Missing a deadline can ruin a season. AnCeAn keeps you ahead of the game with real-time tracking for the next two FPL deadlines. 
+          </p>
+          <ul class="space-y-4 text-gray-600 font-medium">
+            <li class="flex items-center">
+              <svg class="w-5 h-5 mr-3 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Live GMT Countdown
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 mr-3 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Lock Screen Timer (48h prior)
+            </li>
+          </ul>
+        </div>
+        <div class="flex justify-center">
+          <img src="https://raw.githubusercontent.com/brianosullivan241177/Ancean/main/image0.png" 
+               class="screenshot-shadow w-64 md:w-72" alt="App Preview">
+        </div>
+      </div>
+    </section>
 
-<div class="w-full py-16 px-6" style="background-color: #ffffff;">
-    <div class="max-w-6xl mx-auto text-center">
-     <h2 class="mb-6" style="font-size: 2em; font-weight: 700; color: #1f2937;">Buy me a coffee</h2>
-     <p style="font-size: 1.2em; color: #4b5563; line-height: 1.6;">
-       If you find the app useful it would be amazing if you could buy me a coffee. Please click on the link below.<br><a href="https://buymeacoffee.com/briansosullivan"><b>Buy me a coffee, Please</b></a>
-      <br>
-      <br>
-     </p>
-    </div>
-   
-<div class="w-full py-16 px-6" style="background-color: #ffffff;">
-    <div class="max-w-6xl mx-auto text-center">
-     <h2 class="mb-6" style="font-size: 2em; font-weight: 700; color: #1f2937;">Privacy Policy</h2>
-     <p style="font-size: 1.2em; color: #4b5563; line-height: 1.6;">
-       <br><a href="https://brianosullivan241177.github.io/Ancean/FPL_Privacy"><b>Privacy Policy</b></a>
-      <br>
-      <br>
-     </p>
-    </div>
-   <!-- Footer -->
-   <div class="w-full py-12 px-6" style="background-color: #1f2937;">
-    <div class="max-w-4xl mx-auto text-center">
-     <p style="color: #9ca3af; font-size: 0.95em;">© 2026 AnCeAn. All rights reserved.</p>
-    </div>
-   </div>
+    <section class="bg-[#f5f5f7] py-24 px-6">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-center text-4xl md:text-5xl font-bold section-title mb-16">Simple. Effective.</h2>
+        <div class="flex flex-col md:flex-row gap-12 justify-center items-center">
+          <div class="screenshot-shadow overflow-hidden w-64 md:w-72 bg-white">
+            <img src="https://raw.githubusercontent.com/brianosullivan241177/Ancean/main/Prince_FPL.png" alt="App Screenshot">
+          </div>
+          <div class="max-w-sm text-center md:text-left">
+            <h3 class="text-2xl font-semibold mb-4">Never miss a transfer.</h3>
+            <p class="text-gray-500">A clean interface designed to give you exactly what you need in seconds. No clutter, just data.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 px-6 text-center">
+      <div class="max-w-3xl mx-auto apple-card p-12 border border-gray-100 shadow-sm">
+        <h2 class="text-3xl font-bold mb-6">Support the Developer</h2>
+        <p class="text-gray-600 mb-8 text-lg">If AnCeAn helped you clinch your mini-league, consider supporting my first app journey!</p>
+        <a href="https://buymeacoffee.com/briansosullivan" class="btn-apple inline-block text-lg">
+          Buy me a coffee
+        </a>
+      </div>
+    </section>
+
+    <footer class="bg-white py-12 px-6 border-t border-gray-100">
+      <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+        <p class="text-gray-400 text-sm">© 2026 AnCeAn. All rights reserved.</p>
+        <div class="flex gap-8">
+          <a href="https://brianosullivan241177.github.io/Ancean/FPL_Privacy" class="text-sm text-gray-500 hover:text-blue-600 transition">Privacy Policy</a>
+          <a href="#" class="text-sm text-gray-500 hover:text-blue-600 transition">Support</a>
+        </div>
+      </div>
+    </footer>
+
   </div>
- </body>
+</body>
 </html>
