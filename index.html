@@ -27,7 +27,6 @@
       background: rgba(255, 255, 255, 0.8);
       backdrop-filter: blur(20px);
       border-radius: 24px;
-      transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .screenshot-shadow {
@@ -64,7 +63,6 @@
       <div class="max-w-4xl mx-auto text-center">
         <h1 class="text-5xl md:text-7xl font-bold section-title mb-6 tracking-tight">Master the Deadline.<br><span class="text-blue-600">Conquer your Mini-League.</span></h1>
         <p class="text-xl md:text-2xl font-medium text-gray-500 mb-10 max-w-2xl mx-auto">Real-time FPL tracking designed for the beautiful game. Stay ahead, stay informed, and never miss a transfer again.</p>
-        
         <div class="flex flex-col sm:flex-row justify-center gap-4">
           <a href="#" class="btn-apple text-lg">Get Started with AnCeAn</a>
           <a href="#features" class="px-8 py-3 rounded-full font-medium text-gray-600 hover:bg-gray-100 transition">View Features</a>
@@ -72,146 +70,128 @@
       </div>
     </section>
 
-    <section id="features" class="py-20 px-6 max-w-6xl mx-auto">
-      <div class="grid md:grid-cols-3 gap-8 items-center">
-        
-        <div>
+    <section id="features" class="py-24 px-6">
+      <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-16">
+        <div class="flex-1">
           <h2 class="text-4xl font-bold section-title mb-6">FPL Deadline Tracker</h2>
-          <p class="text-lg text-gray-600 leading-relaxed mb-6">
+          <p class="text-lg text-gray-600 leading-relaxed mb-8">
             Missing a deadline can ruin a season. AnCeAn keeps you ahead of the game with real-time tracking for the next two FPL deadlines. 
           </p>
-          <ul class="space-y-4 text-gray-600 font-medium">
+          <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-gray-600 font-medium">
             <li class="flex items-center">
               <svg class="w-5 h-5 mr-3 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
               Live GMT Countdown
             </li>
             <li class="flex items-center">
               <svg class="w-5 h-5 mr-3 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-              Lock Screen Timer (48h prior)
+              Linked to Official API
             </li>
             <li class="flex items-center">
               <svg class="w-5 h-5 mr-3 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-              Linked to Official FPL API
+              Lock Screen Timer
             </li>
-             <li class="flex items-center">
+            <li class="flex items-center">
               <svg class="w-5 h-5 mr-3 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
               Live Rank Feature
             </li>
           </ul>
         </div>
-
-        <div class="flex justify-center">
-          <img src="https://raw.githubusercontent.com/brianosullivan241177/Ancean/main/image0.png" 
-               class="screenshot-shadow w-64 md:w-full max-w-[280px]" alt="App Preview 1">
+        <div class="flex-1 flex justify-center">
+          <img src="https://raw.githubusercontent.com/brianosullivan241177/Ancean/main/image0.png" class="screenshot-shadow w-64 md:w-72" alt="App Preview">
         </div>
-
-        <div class="flex justify-center">
-          <img src="https://raw.githubusercontent.com/brianosullivan241177/Ancean/main/FPL_Load_Team.jpeg" 
-               class="screenshot-shadow w-64 md:w-full max-w-[280px]" alt="App Preview 2">
-        </div>
-
       </div>
     </section>
 
     <section class="bg-[#f5f5f7] py-24 px-6">
-      <div class="max-w-6xl mx-auto">
-        <h2 class="text-center text-4xl md:text-5xl font-bold section-title mb-16">Simple. Effective.</h2>
-        <div class="flex flex-col md:flex-row gap-8 justify-center items-center">
-          <div class="screenshot-shadow overflow-hidden w-64 md:w-64 bg-white">
-            <img src="https://raw.githubusercontent.com/brianosullivan241177/Ancean/main/FPL_NO_Timer_Yet.jpeg" alt="App Screenshot 1">
-          </div>
-          <div class="max-w-sm text-center md:text-left">
-            <h3 class="text-2xl font-semibold mb-4">Never miss a transfer.</h3>
-            <p class="text-gray-500">A clean interface designed to give you exactly what you need in seconds. No clutter, just data.</p>
+      <div class="max-w-6xl mx-auto flex flex-col md:flex-row-reverse items-center gap-16">
+        <div class="flex-1">
+          <h2 class="text-4xl font-bold section-title mb-6">Simple. Effective.</h2>
+          <h3 class="text-2xl font-semibold mb-4">Never miss a transfer.</h3>
+          <p class="text-lg text-gray-500 leading-relaxed">A clean interface designed to give you exactly what you need in seconds. No clutter, just the data you need to make the right moves before the whistle blows.</p>
+        </div>
+        <div class="flex-1 flex justify-center">
+          <div class="screenshot-shadow overflow-hidden w-64 md:w-72 bg-white">
+            <img src="https://raw.githubusercontent.com/brianosullivan241177/Ancean/main/FPL_NO_Timer_Yet.jpeg" alt="App Screenshot">
           </div>
         </div>
       </div>
     </section>
 
     <section class="bg-[#1d1d1f] py-24 px-6 overflow-hidden">
-      <div class="max-w-6xl mx-auto">
-        <div class="flex flex-col md:flex-row-reverse gap-12 justify-center items-center">
+      <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-16">
+        <div class="flex-1">
+          <h2 class="text-white text-4xl font-bold section-title mb-6">The pressure is on.</h2>
+          <p class="text-gray-400 text-lg leading-relaxed mb-8">
+            AnCeAn keeps you focused. Watch the seconds tick down in real-time as the deadline approaches, ensuring you stay calm under pressure.
+          </p>
+          <div class="inline-flex items-center text-orange-500 font-semibold text-lg">
+            <span class="relative flex h-3 w-3 mr-3">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-3 w-3 bg-orange-500"></span>
+            </span>
+            Live Precision Timing
+          </div>
+        </div>
+        <div class="flex-1 flex justify-center">
           <div class="screenshot-shadow overflow-hidden w-64 md:w-72 bg-black border-gray-800">
-            <img src="https://raw.githubusercontent.com/brianosullivan241177/Ancean/main/FPL_Lr_Name.jpeg" 
-                 alt="App showing urgent deadline countdown" 
-                 class="w-full h-auto block">
-          </div>
-          <div class="max-w-sm text-center md:text-right">
-            <h2 class="text-white text-4xl font-bold section-title mb-6">Pressure is on.</h2>
-            <p class="text-gray-400 text-lg leading-relaxed mb-6">
-              FPL Deadline Tracker keeps you focused. Watch the seconds tick down in real-time as the deadline approaches.
-            </p>
-            <div class="inline-flex items-center text-orange-500 font-semibold">
-              <span class="relative flex h-3 w-3 mr-3">
-                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
-                <span class="relative inline-flex rounded-full h-3 w-3 bg-orange-500"></span>
-              </span>
-              Live Accuracy
-            </div>
+            <img src="https://raw.githubusercontent.com/brianosullivan241177/Ancean/main/FPL_Lr_Name.jpeg" alt="Urgent Countdown" class="w-full">
           </div>
         </div>
       </div>
     </section>
 
-    <section class="bg-white py-24 px-6 overflow-hidden border-b border-gray-100">
-      <div class="max-w-6xl mx-auto">
-        <div class="flex flex-col md:flex-row gap-12 justify-center items-center">
+    <section class="bg-white py-24 px-6 border-b border-gray-100">
+      <div class="max-w-6xl mx-auto flex flex-col md:flex-row-reverse items-center gap-16">
+        <div class="flex-1">
+          <h2 class="text-4xl font-bold section-title mb-6">At a Glance</h2>
+          <p class="text-gray-500 text-lg leading-relaxed mb-8">
+            Stay updated without even unlocking your phone. Our dedicated lock screen integration ensures the deadline is always front and center when every second counts.
+          </p>
+          <div class="text-blue-600 font-semibold flex items-center text-lg">
+            <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+            </svg>
+            Native Lock Screen Support
+          </div>
+        </div>
+        <div class="flex-1 flex justify-center">
           <div class="screenshot-shadow overflow-hidden w-64 md:w-72 bg-white">
-            <img src="https://raw.githubusercontent.com/brianosullivan241177/Ancean/main/FPL_App1_LS - 1.jpeg" 
-                 alt="App Lock Screen Widget" 
-                 class="w-full h-auto block">
-          </div>
-          <div class="max-w-sm text-center md:text-left">
-            <h2 class="text-4xl font-bold section-title mb-6">Lock Screen</h2>
-            <p class="text-gray-500 text-lg leading-relaxed mb-6">
-              Stay updated without even unlocking your phone. Our dedicated lock screen integration ensures the deadline is always front and center.
-            </p>
-            <div class="text-blue-600 font-semibold flex items-center justify-center md:justify-start">
-              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
-              </svg>
-              Glanceable Info
-            </div>
+            <img src="https://raw.githubusercontent.com/brianosullivan241177/Ancean/main/FPL_App1_LS - 1.jpeg" alt="Lock Screen Support" class="w-full">
           </div>
         </div>
       </div>
     </section>
 
-    <section class="py-20 px-6 bg-gray-50">
+    <section class="py-24 px-6 bg-gray-50">
       <div class="max-w-3xl mx-auto text-center">
         <h2 class="text-3xl font-bold mb-4">Meet the Developer</h2>
-        <div class="w-16 h-1 bg-blue-600 mx-auto mb-6"></div>
-        <p class="text-gray-600 text-lg leading-relaxed">
-          Hi, I'm <span class="font-bold text-gray-900">Brian O'Sullivan</span>. FPL Deadline Tracker is my first step into the world of app development, born out of a passion for football and a frustration with missed transfer windows. I built this to be the tool I needed—I hope it helps you too.
+        <div class="w-16 h-1 bg-blue-600 mx-auto mb-8"></div>
+        <p class="text-gray-600 text-lg leading-relaxed mb-12">
+          Hi, I'm <span class="font-bold text-gray-900">Brian O'Sullivan</span>. AnCeAn is my first step into the world of app development, born out of a passion for football and a frustration with missed transfer windows.
         </p>
+        
+        <div class="apple-card p-10 bg-white shadow-sm border border-gray-100">
+          <h2 class="text-2xl font-bold mb-4">Support the Journey</h2>
+          <p class="text-gray-600 mb-8">If AnCeAn helped you clinch your mini-league, consider supporting the continued development of this project.</p>
+          <a href="https://buymeacoffee.com/briansosullivan" class="btn-apple">Buy me a coffee</a>
+        </div>
       </div>
     </section>
 
-    <section class="py-24 px-6 text-center">
-      <div class="max-w-3xl mx-auto apple-card p-12 border border-gray-100 shadow-sm">
-        <h2 class="text-3xl font-bold mb-6">Support the Journey</h2>
-        <p class="text-gray-600 mb-8 text-lg">If AnCeAn helped you clinch your mini-league or save a gameweek, consider supporting the continued development of this project.</p>
-        <a href="https://buymeacoffee.com/briansosullivan" class="btn-apple text-lg">
-          Buy me a coffee
-        </a>
-      </div>
-    </section>
-
-    <section class="py-12 px-6 border-t border-gray-50">
-      <div class="max-w-3xl mx-auto text-center">
-        <h3 class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">Disclaimer</h3>
-        <p class="text-xs text-gray-400 leading-relaxed">
-          While AnCeAn strives for 100% accuracy, Fantasy Premier League schedules can change due to fixture postponements or technical sync issues. This app is a supplementary tool for informational purposes only. The developer is not responsible for missed deadlines, failed transfers, or your mini-league ranking. Always double-check the official FPL site if you're making crucial last-minute moves.
-        </p>
-      </div>
-    </section>
-
-    <footer class="bg-white py-12 px-6 border-t border-gray-100">
-      <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-        <p class="text-gray-400 text-sm">© 2026 AnCeAn. All rights reserved.</p>
-        <div class="flex gap-8">
-          <a href="https://brianosullivan241177.github.io/Ancean/FPL_Privacy" class="text-sm text-gray-500 hover:text-blue-600 transition">Privacy Policy</a>
-          <a href="mailto:Brians.osullivan@gmail.com?subject=AnCeAn%20App%20Inquiry" class="text-sm text-gray-500 hover:text-blue-600 transition">Contact Support</a>
+    <footer class="bg-white py-16 px-6 border-t border-gray-100">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <h3 class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">Disclaimer</h3>
+          <p class="text-xs text-gray-400 leading-relaxed max-w-3xl mx-auto">
+            While AnCeAn strives for 100% accuracy, Fantasy Premier League schedules can change due to fixture postponements. This app is a supplementary tool for informational purposes only. The developer is not responsible for missed deadlines or mini-league rankings.
+          </p>
+        </div>
+        <div class="flex flex-col md:flex-row justify-between items-center gap-6 pt-8 border-t border-gray-50">
+          <p class="text-gray-400 text-sm">© 2026 AnCeAn. All rights reserved.</p>
+          <div class="flex gap-8">
+            <a href="https://brianosullivan241177.github.io/Ancean/FPL_Privacy" class="text-sm text-gray-500 hover:text-blue-600 transition">Privacy Policy</a>
+            <a href="mailto:Brians.osullivan@gmail.com?subject=AnCeAn%20App%20Inquiry" class="text-sm text-gray-500 hover:text-blue-600 transition">Contact Support</a>
+          </div>
         </div>
       </div>
     </footer>
